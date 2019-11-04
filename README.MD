@@ -104,4 +104,9 @@ Syntax: `.//tag[@attribute='value']`
 ## Section 21:
 1. Calendar Selector: remember to see the format of the calendar (maybe ul/li, table,..)
 2. Autocomplete select by Xpath
-3. Take screenshots
+3. Take screenshots `driver.save_screenshot(save_dir)`, may throw `NotADirectoryException`
+4. Execute JS script `driver.execute_script(...)` 
+    - Find size with `window.inner(Height|Width)`
+    - Scroll down with `window.scrollBy(horizontal, vertical)` base on window size
+    - Scroll element into view `element.scrollIntoView(true)`
+    
