@@ -109,4 +109,18 @@ Syntax: `.//tag[@attribute='value']`
     - Find size with `window.inner(Height|Width)`
     - Scroll down with `window.scrollBy(horizontal, vertical)` base on window size
     - Scroll element into view `element.scrollIntoView(true)`
-    
+
+## Section 22:
+1. Switch window:
+    - Each window win have a handle
+    - Get current handle: `driver.current_window_handle`
+    - Get all handles: `driver.window_handles`
+    - Switch handle: `drive.switch_to.window(handle)`
+    - Remember to switch back even if you close the pop-up one
+2. IFrame:
+    - Notice if part of a page is IFrame or not, if it does, you must switch frame first
+    - Get the id of the Iframe then: `driver.switch_to.frame(id/name/index)`
+    - Switch to normal: `driver.switch_to.default_content()`
+3. Javascript popup:
+    - Alert()/ Confirm() -> `driver.switch_to.alert`
+        - This object will provide some function like `accept(), dismiss()`,..
